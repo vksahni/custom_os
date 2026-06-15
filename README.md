@@ -1,6 +1,8 @@
 # TeraVolt OS
 
-TeraVolt OS is an Android-based operating system for embedded systems, industrial automation, drone ground stations, IoT devices, smart agriculture, AI edge computing, Raspberry Pi, and ARM platforms.
+TeraVolt OS is an Android-based embedded operating system built from the Android Open Source Project (AOSP). It is designed for industrial automation, IoT devices, drone ground stations, smart agriculture, Raspberry Pi and ARM platforms, and AI edge computing.
+
+The goal of TeraVolt OS is to provide a secure, lightweight, modular, and production-ready Android platform for embedded and industrial use cases. It combines the Android runtime and application ecosystem with hardware-focused platform services for serial communication, CAN Bus, DroneCAN, MQTT, device monitoring, OTA updates, and edge AI inference.
 
 This repository is the orchestration layer around AOSP. It keeps upstream Android source under `aosp/`, board and product definitions under `device/`, partner/vendor integration under `vendor/`, and independently testable application/service modules in top-level workspaces before they are wired into the platform build.
 
