@@ -1,0 +1,10 @@
+out/
+.repo/
+*.pyc
+__pycache__/
+.gradle/
+build/
+.idea/
+*.iml
+*.swp
+*.log

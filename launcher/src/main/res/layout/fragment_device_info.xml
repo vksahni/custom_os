@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Device Information"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Device Info Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Device: TeraVolt ARM64"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/productModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Model: Reference"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/serialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serial: N/A"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/buildVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build: 1.0"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/androidVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Android: 15"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/kernelVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kernel: Generic"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- Hardware Status Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hardware Interfaces"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/serialStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serial: ✓"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/canStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CAN: ✓"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/mqttStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MQTT: ✓"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/gpioStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GPIO: ✓"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

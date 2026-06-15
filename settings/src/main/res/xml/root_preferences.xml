@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Device Information Section -->
+    <PreferenceCategory android:title="@string/category_device_info">
+        <Preference
+            android:key="device_name"
+            android:title="@string/pref_device_name"
+            android:summary="TeraVolt OS ARM64" />
+        <Preference
+            android:key="device_model"
+            android:title="@string/pref_device_model"
+            android:summary="Reference Platform" />
+        <Preference
+            android:key="build_version"
+            android:title="@string/pref_build_version"
+            android:summary="1.0.0" />
+        <Preference
+            android:key="android_version"
+            android:title="@string/pref_android_version"
+            android:summary="15.0.0_r1" />
+    </PreferenceCategory>
+
+    <!-- Serial Configuration Section -->
+    <PreferenceCategory android:title="@string/category_serial">
+        <Preference
+            android:key="serial_config"
+            android:title="@string/pref_serial_config"
+            android:summary="@string/pref_serial_summary" />
+        <SwitchPreference
+            android:key="serial_enabled"
+            android:title="@string/pref_serial_enabled"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:key="serial_baudrate"
+            android:title="@string/pref_serial_baudrate"
+            android:defaultValue="115200" />
+    </PreferenceCategory>
+
+    <!-- CAN Configuration Section -->
+    <PreferenceCategory android:title="@string/category_can">
+        <Preference
+            android:key="can_config"
+            android:title="@string/pref_can_config"
+            android:summary="@string/pref_can_summary" />
+        <SwitchPreference
+            android:key="can_enabled"
+            android:title="@string/pref_can_enabled"
+            android:defaultValue="true" />
+        <ListPreference
+            android:key="can_bitrate"
+            android:title="@string/pref_can_bitrate"
+            android:entries="@array/can_bitrates"
+            android:entryValues="@array/can_bitrate_values"
+            android:defaultValue="500000" />
+    </PreferenceCategory>
+
+    <!-- MQTT Configuration Section -->
+    <PreferenceCategory android:title="@string/category_mqtt">
+        <Preference
+            android:key="mqtt_config"
+            android:title="@string/pref_mqtt_config"
+            android:summary="@string/pref_mqtt_summary" />
+        <SwitchPreference
+            android:key="mqtt_enabled"
+            android:title="@string/pref_mqtt_enabled"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="mqtt_broker"
+            android:title="@string/pref_mqtt_broker"
+            android:inputType="text" />
+        <EditTextPreference
+            android:key="mqtt_port"
+            android:title="@string/pref_mqtt_port"
+            android:inputType="number"
+            android:defaultValue="1883" />
+    </PreferenceCategory>
+
+    <!-- AI Configuration Section -->
+    <PreferenceCategory android:title="@string/category_ai">
+        <Preference
+            android:key="ai_config"
+            android:title="@string/pref_ai_config"
+            android:summary="@string/pref_ai_summary" />
+        <SwitchPreference
+            android:key="ai_enabled"
+            android:title="@string/pref_ai_enabled"
+            android:defaultValue="false" />
+        <ListPreference
+            android:key="ai_model"
+            android:title="@string/pref_ai_model"
+            android:entries="@array/ai_models"
+            android:entryValues="@array/ai_model_values" />
+    </PreferenceCategory>
+
+    <!-- OTA Configuration Section -->
+    <PreferenceCategory android:title="@string/category_ota">
+        <Preference
+            android:key="ota_config"
+            android:title="@string/pref_ota_config"
+            android:summary="@string/pref_ota_summary" />
+        <SwitchPreference
+            android:key="ota_auto_check"
+            android:title="@string/pref_ota_auto_check"
+            android:defaultValue="true" />
+        <Preference
+            android:key="ota_check_now"
+            android:title="@string/pref_ota_check_now" />
+    </PreferenceCategory>
+
+    <!-- Network Tools Section -->
+    <PreferenceCategory android:title="@string/category_network">
+        <Preference
+            android:key="network_info"
+            android:title="@string/pref_network_info"
+            android:summary="@string/pref_network_summary" />
+        <Preference
+            android:key="network_ping"
+            android:title="@string/pref_network_ping" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Gradle Wrapper script for launching Gradle builds
+# This script downloads and runs Gradle if not already present
+
+set -e
+
+GRADLE_VERSION="8.4"
+GRADLE_DOWNLOAD_URL="https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip"
+GRADLE_HOME="${HOME}/.gradle/gradle-${GRADLE_VERSION}"
+GRADLE_ZIP="${HOME}/.gradle/gradle-${GRADLE_VERSION}.zip"
+
+# Create .gradle directory if it doesn't exist
+mkdir -p "${HOME}/.gradle"
+
+# Download Gradle if not already present
+if [ ! -d "$GRADLE_HOME" ]; then
+    echo "Downloading Gradle ${GRADLE_VERSION}..."
+    if command -v wget &> /dev/null; then
+        wget -q -O "$GRADLE_ZIP" "$GRADLE_DOWNLOAD_URL"
+    elif command -v curl &> /dev/null; then
+        curl -s -o "$GRADLE_ZIP" "$GRADLE_DOWNLOAD_URL"
+    else
+        echo "Error: Neither wget nor curl found. Please install one of them."
+        exit 1
+    fi
+    
+    # Unzip Gradle
+    unzip -q "$GRADLE_ZIP" -d "${HOME}/.gradle"
+    rm "$GRADLE_ZIP"
+    echo "Gradle ${GRADLE_VERSION} installed"
+fi
+
+# Run Gradle
+exec "$GRADLE_HOME/bin/gradle" "$@"

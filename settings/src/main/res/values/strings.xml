@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TeraVolt Settings</string>
+
+    <!-- Categories -->
+    <string name="category_device_info">Device Information</string>
+    <string name="category_serial">Serial Port Configuration</string>
+    <string name="category_can">CAN Bus Configuration</string>
+    <string name="category_mqtt">MQTT Broker Configuration</string>
+    <string name="category_ai">AI Inference Configuration</string>
+    <string name="category_ota">OTA Update Configuration</string>
+    <string name="category_network">Network Tools</string>
+
+    <!-- Device Information -->
+    <string name="pref_device_name">Device Name</string>
+    <string name="pref_device_model">Device Model</string>
+    <string name="pref_build_version">Build Version</string>
+    <string name="pref_android_version">Android Version</string>
+
+    <!-- Serial Configuration -->
+    <string name="pref_serial_config">Serial Port Settings</string>
+    <string name="pref_serial_summary">Configure UART/RS485 interface</string>
+    <string name="pref_serial_enabled">Enable Serial Port</string>
+    <string name="pref_serial_baudrate">Baud Rate</string>
+
+    <!-- CAN Configuration -->
+    <string name="pref_can_config">CAN Bus Settings</string>
+    <string name="pref_can_summary">Configure CAN interface and bitrate</string>
+    <string name="pref_can_enabled">Enable CAN Interface</string>
+    <string name="pref_can_bitrate">CAN Bitrate (kbps)</string>
+
+    <!-- MQTT Configuration -->
+    <string name="pref_mqtt_config">MQTT Broker Settings</string>
+    <string name="pref_mqtt_summary">Configure MQTT broker connection</string>
+    <string name="pref_mqtt_enabled">Enable MQTT Client</string>
+    <string name="pref_mqtt_broker">Broker Address</string>
+    <string name="pref_mqtt_port">Broker Port</string>
+
+    <!-- AI Configuration -->
+    <string name="pref_ai_config">AI Inference Settings</string>
+    <string name="pref_ai_summary">Configure edge AI inference models</string>
+    <string name="pref_ai_enabled">Enable AI Inference</string>
+    <string name="pref_ai_model">AI Model</string>
+
+    <!-- OTA Configuration -->
+    <string name="pref_ota_config">OTA Update Settings</string>
+    <string name="pref_ota_summary">Configure over-the-air updates</string>
+    <string name="pref_ota_auto_check">Check for Updates Automatically</string>
+    <string name="pref_ota_check_now">Check for Updates Now</string>
+
+    <!-- Network Tools -->
+    <string name="pref_network_info">Network Information</string>
+    <string name="pref_network_summary">View network configuration</string>
+    <string name="pref_network_ping">Test Connectivity (Ping)</string>
+
+    <!-- Arrays -->
+    <string-array name="can_bitrates">
+        <item>125 kbps</item>
+        <item>250 kbps</item>
+        <item>500 kbps</item>
+        <item>1000 kbps</item>
+    </string-array>
+
+    <string-array name="can_bitrate_values">
+        <item>125000</item>
+        <item>250000</item>
+        <item>500000</item>
+        <item>1000000</item>
+    </string-array>
+
+    <string-array name="ai_models">
+        <item>MobileNet v2</item>
+        <item>EfficientNet</item>
+        <item>TensorFlow Lite</item>
+        <item>ONNX Model</item>
+    </string-array>
+
+    <string-array name="ai_model_values">
+        <item>mobilenet_v2</item>
+        <item>efficientnet</item>
+        <item>tflite</item>
+        <item>onnx</item>
+    </string-array>
+</resources>

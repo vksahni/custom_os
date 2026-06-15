@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TeraVolt Launcher</string>
+    <string name="status_idle">System Ready</string>
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_device_info">Device Info</string>
+    <string name="tab_controls">Controls</string>
+
+    <!-- Dashboard -->
+    <string name="label_system_metrics">System Metrics</string>
+    <string name="label_cpu_usage">CPU Usage</string>
+    <string name="label_memory_usage">Memory Usage</string>
+    <string name="label_temperature">Temperature</string>
+
+    <!-- Device Info -->
+    <string name="label_device_information">Device Information</string>
+    <string name="label_product_name">Product Name</string>
+    <string name="label_product_model">Product Model</string>
+    <string name="label_serial_number">Serial Number</string>
+    <string name="label_build_version">Build Version</string>
+    <string name="label_android_version">Android Version</string>
+    <string name="label_kernel_version">Kernel Version</string>
+
+    <!-- Hardware Status -->
+    <string name="label_hardware_interfaces">Hardware Interfaces</string>
+    <string name="label_serial_interface">Serial Interface</string>
+    <string name="label_can_interface">CAN Interface</string>
+    <string name="label_mqtt_service">MQTT Service</string>
+    <string name="label_gpio_interface">GPIO Interface</string>
+
+    <!-- Controls -->
+    <string name="label_mqtt_connect">Connect MQTT</string>
+    <string name="label_mqtt_disconnect">Disconnect MQTT</string>
+    <string name="label_can_enable">Enable CAN</string>
+    <string name="label_can_disable">Disable CAN</string>
+    <string name="label_serial_console">Open Serial Console</string>
+    <string name="label_ai_inference">Run AI Inference</string>
+    <string name="label_check_updates">Check for Updates</string>
+    <string name="label_reboot">Reboot System</string>
+
+    <!-- Messages -->
+    <string name="msg_connecting">Connecting...</string>
+    <string name="msg_connected">Connected</string>
+    <string name="msg_disconnected">Disconnected</string>
+    <string name="msg_error">Error: %s</string>
+    <string name="msg_success">Success</string>
+</resources>

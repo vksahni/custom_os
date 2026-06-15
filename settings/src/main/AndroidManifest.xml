@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.teravolt.settings">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <!-- TeraVolt Service Permissions -->
+    <uses-permission android:name="com.teravolt.permission.CONFIGURE_MQTT_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.CONFIGURE_CAN_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.CONFIGURE_SERIAL_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.CONFIGURE_AI_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.CONFIGURE_OTA_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:debuggable="@bool/config_debuggable"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.TeraVolt.Settings"
+        tools:targetApi="31">
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Preference Activity (if using PreferenceActivity pattern) -->
+        <activity
+            android:name=".PreferenceActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

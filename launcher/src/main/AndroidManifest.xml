@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.teravolt.launcher">
+
+    <!-- Hardware Access Permissions -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- TeraVolt Service Permissions -->
+    <uses-permission android:name="com.teravolt.permission.ACCESS_MQTT_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.ACCESS_CAN_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.ACCESS_SERIAL_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.ACCESS_AI_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.ACCESS_MONITOR_SERVICE" />
+    <uses-permission android:name="com.teravolt.permission.ACCESS_OTA_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:debuggable="@bool/config_debuggable"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.TeraVolt.Launcher"
+        tools:targetApi="31">
+
+        <!-- Main Launcher Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.TeraVolt.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Device Info Activity -->
+        <activity
+            android:name=".ui.DeviceInfoActivity"
+            android:exported="false" />
+
+        <!-- Dashboard Widgets Provider -->
+        <receiver
+            android:name=".widget.DashboardWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dashboard_widget_info" />
+        </receiver>
+
+        <!-- TeraVolt Services (Binder) -->
+        <service
+            android:name=".service.SerialServiceClient"
+            android:enabled="true" />
+        <service
+            android:name=".service.CANServiceClient"
+            android:enabled="true" />
+        <service
+            android:name=".service.MQTTServiceClient"
+            android:enabled="true" />
+        <service
+            android:name=".service.AIServiceClient"
+            android:enabled="true" />
+        <service
+            android:name=".service.DeviceMonitorClient"
+            android:enabled="true" />
+        <service
+            android:name=".service.OTAServiceClient"
+            android:enabled="true" />
+
+    </application>
+
+</manifest>
